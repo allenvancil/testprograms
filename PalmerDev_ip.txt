@@ -1,0 +1,9 @@
+Device, ip
+DESKTOP-PVLFNDD, 192.168.1.54
+HPC4A29A, 192.168.1.211
+Temp_1, 192.168.1.143
+LocalHost Night Owl, 192.168.1.34
+Allen-s-S20-FE, 192.168.1.183
+Galaxy-S24, 192.168.1.250
+Allen-s-Tab-S6-Lite, 192.168.1.111
+Billy-DoucheLT, 192.168.23.185
