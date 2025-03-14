@@ -1,0 +1,44 @@
+Linortek Modules – User name: ET Shop / Password: @dmin
+
+1.	Abbott Loop 10.170.28.100 Dukane Sync 20180420D correct
+2.	Alpenglow 10.172.28.100 Dukane Sync 20180420D correct
+3.	Bartlett 10.32.28.100 TC21 Sync 20180420D correct
+4.	Baxter 10.174.28.100 TC21 Sync 20180420D correct
+5.	Begich 10.43.28.100 Dukane Sync 
+6.	Bowman 10.178.28.100 TC21 Sync 20180420D correct
+7.	Campbell 10.179.28.100  NAT 20161027F correct
+8.	Chinook 10.181.28.100 TC21 Sync
+9.	 Chester Valley 10.180.28.100 Dukane Sync 20180420D correct
+10.	 Chugiak El 10.183.28.100 NAT / Dukane Sync 20161027F correct
+11.	 Creekside 10.185.28.100 TC21 Sync 20180420D correct
+12.	 Dimond Main 10.36.28.100 TC21 Sync 20190420K correct
+13.	  Dimond Gym 10.36.28.101 Clock Sync 20190420K correct
+14.	 Eagle River High 10.48.28.100 Dukane Sync 20180420D correct
+15.	 Goldenview  10.38.28.100 TC21 Sync 20190420K correct
+16.	 Hanshew 10.40.28.100 Dukane/Stan 20180420D Correct
+17.	 Homestead 10.193.28.100 NAT 20161027F correct (UNABLE TO CONNECT)
+18.	 Inlet View 10.195.28.100 TC6 Sync 20180420D correct
+19.	 Kasuun 10.196.28.100 NAT 20180420D correct
+20.	 KCC 10.235.28.100 Dukane Sync 20161027F correct
+21.	 Kennedy 10.197.28.100 NAT 20161027F correct
+22.	 Kincaid 10.198.32.5 NAT 20161027F correct (UNABLE TO CONNECT)
+23.	 Lake Hood 10.200.28.100 TC21 Sync 20180420D correct
+24.	 Lake Otis 10.201.28.100 TC6 Sync 20161027F correct
+25.	 Muldoon 10.205.28.100 TC21 Sync 20180420D correct
+26.	 Northern Lights 10.206.28.100 TC21 Sync 20180420D correct
+27.	 Northwood 10.208.28.100 TC21 Sync 20180420D correct
+28.	 Nunaka Valley 10.209.28.100 TC21 Sync 20180420D correct
+29.	 Ocean View 10.211.28.100 TC21 Sync 20180420D correct
+30.	 Orion 10.212.28.100 Relay1 TC21 Sync 
+31.	 Ravenwood 10.216.28.100 NAT TEMP/Future
+32.	 South 10.49.28.100 TC6 Sync 20161027F correct
+33.	 Steller 10.238.28.100 TC21 Sync 20180420D correct
+34.	 Taku 10.222.28.100 TC21 Sync 20180420D correct
+35.	 Test in Shop 10.12.28.100 
+36.	 Trailside 10.232.28.100 TC21 Sync 20180420D correct
+37.	 Tudor 10.223.28.100 TC6 Sync 20180420D correct (UNABLE TO CONNECT)
+38.	 Turnagain 10.224.64.100 Dukane 
+39.	 Ursa Minor 10.226.28.100 TC6 Sync 20161027F correct
+40.	 Wendler 10.46.28.100 TC21 Sync 20180420D correct
+41.	 Willow Crest 10.229.28.100 Relay1 Stan/R2 Dukane sync 20161027F correct
+42.	 Winterberry Charter 10.248.28.100 12:15:50am clock sync

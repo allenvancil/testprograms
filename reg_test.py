@@ -11,9 +11,10 @@ line_list = []
 
 def Dev_list():
     school_list = []
-    for line in lines:
-        line_list.append(line.strip())
-        school = re.search(reg, line)
+    for line in range(len(lines)):
+        ips = lines[line]
+        line_list.append(ips.strip())
+        school = re.search(reg, ips)
         
         if school:
             school_list.append(school.group())
@@ -21,8 +22,6 @@ def Dev_list():
             pass
     school_list = school_list[1::]  # remove the 1st line
 
-    school_list = pd.DataFrame(school_list)
-    school_list = school_list.values
     return school_list
 
 

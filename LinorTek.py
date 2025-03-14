@@ -22,30 +22,43 @@ def Dev_ip():
             
         else:
             pass
-    ip_list = pd.DataFrame(ip_list)
-    ip_list = ip_list.values
+    
     return ip_list
 
-LL = Dev_list()
-II = Dev_ip()
-All = LL+', '+II
-print(All[2][0])
+D = Dev_list()
+IP = Dev_ip()
+Tot = pd.DataFrame({"Device" : D, "IP address" : IP})
 
-# def ping_ip(ip_list):
+item = Tot["Device"]
+Dev_i = list(item.index)
+
+
+
+
+def ping_ip(Devices, ip_list):
+
+    suc = []
+    unsuc = []
     
-#     for i in ip_list:
+    for i in range(len(ip_list)):
 
-#             if platform.system().lower() == "windows":
-#                 cmd = f"ping -n 1 {i}"
-#             else:
-#                 cmd = f"ping -c 1 {i}"
+            if platform.system().lower() == "windows":
+                cmd = f"ping -n 1 {ip_list[i]}"
+            else:
+                cmd = f"ping -c 1 {ip_list[i]}"
 
-#             response = os.system(cmd)
+            response = os.system(cmd)
 
-#             if response == 0:
-#                 print(f"Ping to {i} sucessful.")
-                
-#             else:
-#                 print(f"Ping to {i} not sucessful")
+            if response == 0:
+                print(f"Ping to {ip_list[i]} sucessful.")
+                suc.append(Devices[i])
+            else:
+                print(f"Ping to {ip_list[i]} for device {Devices[i]} not sucessful")
+                unsuc.append(Devices[i])
 
-# ping_ip(ip_list)
+    return suc, unsuc
+
+A, B = ping_ip(D,IP)
+
+ping_test = list(A + B)
+print(ping_test)
