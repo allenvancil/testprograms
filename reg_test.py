@@ -2,10 +2,10 @@ import re
 #import csv
 import pandas as pd
 
-with open("PalmerDev_ip.txt", 'r') as file:
+with open("linortek_devs.txt", 'r') as file:
     lines = file.readlines()  # 
 
-reg = r"\w([A-Za-z-_0-9\s]+)" # this is regualar express for the school
+reg = r"(\S+)\s+(\S+)" # this is regualar express for the school
 line_list = []
 
 
@@ -17,7 +17,7 @@ def Dev_list():
         school = re.search(reg, ips)
         
         if school:
-            school_list.append(school.group())
+            school_list.append(school.group(2))
         else:
             pass
     school_list = school_list[1::]  # remove the 1st line
