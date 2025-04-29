@@ -34,10 +34,17 @@ try:
         DL.append(DLspd)
         UL.append(ULspd)
         timestamps.append(time_now)
-        time.sleep(120)
+        time.sleep(600)
 
+        # make data frame of download and upload speeds to go to .csv
+        df = {'time' : timestamps, 'Download' : DL, 'Uploads' : UL}
+        
+        #make date/time attch to distigush diff .csv's at diff times
+        nw_t = datetime.now().strftime('%H%M')
+        nw_d = datetime.now().strftime('%m%d')
+        nw = nw_d+'_'+nw_t
+        df = pd.DataFrame(df)
+        df.to_csv(f'speedtest_doc{nw}.csv')
 except KeyboardInterrupt:
-    df = {'time' : timestamps, 'Download' : DL, 'Uploads' : UL}
-    df = pd.DataFrame(df)
-    df.to_csv('speedtest_doc.csv')
+    
     print("User stopped measurements...")
