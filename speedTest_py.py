@@ -2,6 +2,7 @@ import speedtest
 import matplotlib.pyplot as plt
 import time
 from datetime import datetime
+import pandas as pd
 
 DL = []
 UL = []
@@ -11,8 +12,8 @@ timestamps = []
 def speedTest():
     st  = speedtest.Speedtest()
 
-    print("finding best server...")
-    st.get_best_server()
+    # print("finding best server...")
+    # st.get_best_server()
 
     print('\nDownload speeds...')
     DLspd = st.download()/1_000_000
@@ -23,30 +24,27 @@ def speedTest():
     #print(ULspd/1000000, 'Mbps')
     return DLspd, ULspd
 
-plt.ion()  ## this allows live plotting
-
-fig, ax = plt.subplots()
 
 try:
     while True:
         DLspd, ULspd = speedTest()
+        print('\nappending data...\n')
         time_now = datetime.now().strftime('%H:%M:%S')
 
         DL.append(DLspd)
         UL.append(ULspd)
         timestamps.append(time_now)
+        time.sleep(600)
 
-        ax.clear()
-        ax.plot(timestamps, DL, label='Downloads (Mbps)', color='blue', marker='o')
-        ax.plot(timestamps, UL, label='Uploads (Mbps)', color='red', marker='x')
-        ax.set_xlabel('Time')
-        ax.set_ylabel('Speed (Mbps)')
-        ax.legend()
-        ax.grid(True)
-        plt.pause(0.1)
-        time.sleep(120)
-
+        # make data frame of download and upload speeds to go to .csv
+        df = {'time' : timestamps, 'Download' : DL, 'Uploads' : UL}
+        
+        #make date/time attch to distigush diff .csv's at diff times
+        nw_t = datetime.now().strftime('%H%M')
+        nw_d = datetime.now().strftime('%m%d')
+        nw = nw_d+'_'+nw_t
+        df = pd.DataFrame(df)
+        df.to_csv(f'speedtest_doc{nw}.csv')
 except KeyboardInterrupt:
+    
     print("User stopped measurements...")
-    plt.ioff()
-    plt.show()
